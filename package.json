@@ -1,0 +1,61 @@
+{
+    "description":  "Chime and a cute whale card when a turn finishes or DSH needs your reply.",
+    "type":  "module",
+    "exports":  {
+                    ".":  "./index.js",
+                    "./client":  "./client.js",
+                    "./locale/*.json":  "./locale/*.json",
+                    "./icon":  "./icon.png"
+                },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web",
+                               "immediately":  true,
+                               "inject":  [
+                                              "@deepseek-ai/dsh-client-ui-layout"
+                                          ]
+                           }
+            },
+    "name":  "dsh-whale-notify",
+    "version":  "0.1.0",
+    "private":  false,
+    "license":  "MIT",
+    "keywords":  [
+                     "dsh",
+                     "dsh-plugin",
+                     "deepseek-harness",
+                     "deepseek",
+                     "whale-notify"
+                 ],
+    "homepage":  "https://github.com/YYY-DXS/dsh-whale-notify#readme",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/YYY-DXS/dsh-whale-notify.git"
+                   },
+    "bugs":  {
+                 "url":  "https://github.com/YYY-DXS/dsh-whale-notify/issues"
+             },
+    "engines":  {
+                    "node":  ">=18",
+                    "dsh":  ">=0.1.0-rc.6 <0.3.0-0"
+                },
+    "files":  [
+                  "index.js",
+                  "client.js",
+                  "cordis.patch.yml",
+                  "locale/*.json",
+                  "icon.png",
+                  "assets",
+                  "widget",
+                  "tools",
+                  "启动鲸鱼娘桌宠.cmd",
+                  "安装开机自启.cmd",
+                  "卸载开机自启.cmd",
+                  "README.md",
+                  "ART_LICENSE.md",
+                  "LICENSE"
+              ]
+}
